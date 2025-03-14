@@ -1,0 +1,51 @@
+table 'Last Date Refresh'
+	lineageTag: 672293ba-b0de-42e4-9b56-dd32c99c610c
+
+	column 'Last DateTime Refresh'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2cdff6b6-9b3e-4ade-83e6-21db540c8201
+		summarizeBy: none
+		sourceColumn: Last DateTime Refresh
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Last Date Refresh'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0a6cd4bb-2c4c-43e5-9d06-28e983aca2ca
+		summarizeBy: none
+		sourceColumn: Last Date Refresh
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Last Time Refresh'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 9e4c9b31-8966-4971-ad66-dc5ff887667d
+		summarizeBy: none
+		sourceColumn: Last Time Refresh
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition 'Last Date Refresh' = m
+		mode: import
+		source =
+				let
+				    Source = DateTime.LocalNow(),
+				    #"Converti en table" = #table(1, {{Source}}),
+				    #"Last Date Refresh" = Table.DuplicateColumn(#"Converti en table", "Column1", "Last Date Refresh"),
+				    #"Last Time Refresh" = Table.DuplicateColumn(#"Last Date Refresh", "Column1", "Last Time Refresh"),
+				    #"Type modifié" = Table.TransformColumnTypes(#"Last Time Refresh",{{"Last Date Refresh", type date}, {"Last Time Refresh", type time}, {"Column1", type datetime}}),
+				    #"Last DateTime Refresh" = Table.RenameColumns(#"Type modifié",{{"Column1", "Last DateTime Refresh"}})
+				in
+				    #"Last DateTime Refresh"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,20 @@
+relationship AutoDetected_ab0d5518-514b-41a5-9d80-2c2ca4cfc16c
+	fromColumn: Fact_HumanResources.FK_Location
+	toColumn: Dim_Location.PK_Location
+
+relationship AutoDetected_2afb70d6-bf78-4f5b-b89e-700dc9e97c2b
+	fromColumn: Fact_HumanResources.FK_Department
+	toColumn: Dim_Department.PK_Department
+
+relationship 02212a57-59dc-ed75-5567-87af656de472
+	fromColumn: Fact_HumanResources.Birthdate
+	toColumn: Dim_Birthdate.Date
+
+relationship 7ca9c87a-431e-9641-2f3b-2e76249fdc2a
+	fromColumn: Fact_HumanResources.Termdate
+	toColumn: Dim_TermDate.Date
+
+relationship 1c39f031-50c5-e51e-d01a-b944f838fbc2
+	fromColumn: Fact_HumanResources.Hiredate
+	toColumn: Dim_HiredDate.Date
+

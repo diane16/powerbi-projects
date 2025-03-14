@@ -1,0 +1,145 @@
+table Dim_Birthdate
+	lineageTag: d11af011-01c8-49d8-9973-95d896232eb9
+
+	column Date
+		formatString: Short Date
+		lineageTag: bef4eacd-8d7b-44dd-a642-ad424f186a4f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		formatString: 0
+		lineageTag: 0c869609-dfac-44f1-8380-e60ceb541210
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Name'
+		lineageTag: 6ebcbd1c-744b-490b-b88a-ecf274213f30
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Number'
+		formatString: 0
+		lineageTag: 1b95951f-6e7e-4207-8cf4-81ce1ad46dd8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: c28d527d-c395-4f7f-a05f-2a3b5dcd1749
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: d5e2ea70-6950-40e0-8cd0-8dbe74d9a9a6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year'
+		lineageTag: 0d3a81bd-8615-4976-8812-c478843e98c9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year sort'
+		lineageTag: 3eafd62d-db55-40df-8861-76685d2fea7f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Year sort]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Week Name'
+		lineageTag: 0eff1968-7dc7-4977-815b-3ec7980b4b9a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Week Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name'
+		lineageTag: 6499b2d2-e856-4333-9606-ab7768900fac
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Number'
+		formatString: 0
+		lineageTag: 63ac39ad-8571-42d4-b17c-52f6cb036c61
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Birthdate = calculated
+		mode: import
+		source = ```
+				
+				VAR StartDate = 
+				    MINX(
+				        UNION(
+				            SELECTCOLUMNS(Fact_HumanResources, "Date", Fact_HumanResources[Birthdate]),
+				            SELECTCOLUMNS(Fact_HumanResources, "Date", Fact_HumanResources[Hiredate]),
+				            SELECTCOLUMNS(Fact_HumanResources, "Date", Fact_HumanResources[Termdate])
+				            ),
+				            [Date]
+				        )
+				
+				VAR EndDate = 
+				    MAXX(
+				        UNION(
+				            SELECTCOLUMNS(Fact_HumanResources, "Date", Fact_HumanResources[Birthdate]),
+				            SELECTCOLUMNS(Fact_HumanResources, "Date", Fact_HumanResources[Hiredate]),
+				            SELECTCOLUMNS(Fact_HumanResources, "Date", Fact_HumanResources[Termdate])
+				            ),
+				            [Date]
+				        )
+				
+				VAR DateTable = 
+				ADDCOLUMNS(
+				    CALENDAR(StartDate, EndDate),
+				    "Year", YEAR([Date]),
+				    "Quarter Name", FORMAT([Date], "\QQ"),
+				    "Quarter Number", QUARTER([Date]),
+				    "Month Name", FORMAT([Date], "MMM"),
+				    "Month Number", MONTH([Date]),
+				    "Month Year", FORMAT([Date], "MMM YYYY"),
+				    "Month Year sort", VALUE(FORMAT([Date], "YYYYMM")),
+				    "Week Name", "W" & WEEKNUM([Date]),
+				    "Day Name", FORMAT([Date], "DDDD"),
+				    "Day Number", WEEKDAY([Date])
+				)
+				
+				RETURN 
+				    DateTable
+				```
+
+	annotation PBI_Id = e58f5db1b6cc4b2b996cdfaca6a6a08c
+

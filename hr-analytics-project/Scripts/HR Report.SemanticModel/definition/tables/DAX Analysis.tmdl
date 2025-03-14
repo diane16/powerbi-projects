@@ -1,0 +1,112 @@
+table 'DAX Analysis'
+	lineageTag: d828332d-5d14-4928-8d11-54812b0499c7
+
+	measure 'Total Employees' = COUNT('Fact_HumanResources'[Employee_ID])
+		formatString: 0
+		lineageTag: 412747b1-b6a3-4213-adfd-006949011b70
+
+	measure 'Terminated Employees' = COUNT('Fact_HumanResources'[Termdate])
+		formatString: 0
+		lineageTag: ccd1e619-73b0-405f-9b3a-9a1eacdb94d1
+
+	measure 'Active Employees' = COUNTBLANK(Fact_HumanResources[Termdate])
+		formatString: 0
+		lineageTag: 2534738e-4a21-49d9-992a-e5d1bb8de903
+
+	measure '% Employees Female' = ```
+			
+			VAR _Total = [Total Employees]
+			VAR _TotalFemale = 
+			CALCULATE(
+			    COUNT(Fact_HumanResources[Employee_ID]),
+			    Fact_HumanResources[Gender] = "Female"
+			    )
+			
+			VAR Result = DIVIDE(_TotalFemale, _Total)
+			RETURN
+			Result
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: 07f05950-00da-41c0-b717-f4e3062845d1
+
+	measure '% Employees Male' = ```
+			
+			VAR _Total = [Total Employees]
+			VAR _TotalMale = 
+			CALCULATE(
+			    COUNT(Fact_HumanResources[Employee_ID]),
+			    Fact_HumanResources[Gender] = "Male"
+			    )
+			
+			VAR Result = DIVIDE(_TotalMale, _Total)
+			RETURN
+			Result
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: ecb16a6d-807f-4c15-ac6e-3aa70049501d
+
+	measure '% Performance' = ```
+			
+			VAR _SinglePerformance = [Active Employees]
+			VAR _TotalPerformance = 
+			CALCULATE(
+			    [Active Employees],
+			    ALLEXCEPT(
+			        Fact_HumanResources,
+			        Fact_HumanResources[Education Level]
+			    )
+			)
+			VAR Result = DIVIDE(_SinglePerformance, _TotalPerformance)
+			RETURN
+			Result
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: 5309b7b9-151d-4c20-9693-96870e148711
+
+	measure 'Average Salary' =
+			
+			CALCULATE(
+			    AVERAGE(Fact_HumanResources[Salary]),
+			    ISBLANK(Fact_HumanResources[Termdate])
+			)
+		formatString: 0
+		lineageTag: fff37738-3e28-4949-a4c2-7f21a69867b3
+
+	measure 'Average Salary Female' =
+			
+			CALCULATE(
+			    AVERAGE(Fact_HumanResources[Salary]),
+			    ISBLANK(Fact_HumanResources[Termdate]),
+			    Fact_HumanResources[Gender] = "Female"
+			)
+		formatString: 0
+		lineageTag: 27d282ad-b9fb-4235-8f3d-c3e549246ad9
+
+	measure 'Average Salary Male' =
+			
+			CALCULATE(
+			    AVERAGE(Fact_HumanResources[Salary]),
+			    ISBLANK(Fact_HumanResources[Termdate]),
+			    Fact_HumanResources[Gender] = "Male"
+			)
+		formatString: 0
+		lineageTag: 136fca19-f927-4cdb-93cc-406276be1365
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 6364e939-7c7f-429c-a769-90d1737ff236
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DAX Analysis' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 0d8d35ff321b412cbf2d512bbf8ce36e
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

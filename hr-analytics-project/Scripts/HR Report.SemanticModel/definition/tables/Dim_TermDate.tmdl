@@ -1,0 +1,109 @@
+table Dim_TermDate
+	lineageTag: 365f06c0-9f7a-476a-a73f-c1b8080c4f39
+
+	column Date
+		formatString: Short Date
+		lineageTag: aa1d0947-9b8c-46f7-a0bb-1c96279f32ad
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		formatString: 0
+		lineageTag: a451d68e-b9ac-44c2-bfad-be5b06821b70
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Name'
+		lineageTag: 4d2103e6-c35a-40ad-96d1-bb4d8ed0c9cc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Quarter Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Number'
+		formatString: 0
+		lineageTag: 2eea31e7-e46f-411a-91e9-0316535bdb5b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Quarter Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: 9b7a6295-f9b8-46f2-9a5b-bef59c23596d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Month Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: d6e64564-8827-4d18-bcc1-53abc017b0f0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year'
+		lineageTag: 7dbaa80a-40ae-45fe-bc29-e7658cd45dde
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Month Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year sort'
+		lineageTag: 76b967fc-d51b-4442-899d-ed244f7224b2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Month Year sort]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Week Name'
+		lineageTag: 2ec9a1f7-ba26-4d5e-b3f6-be679d34854a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Week Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name'
+		lineageTag: 71b619b3-7fcb-4336-9ea5-0a6c19855d36
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Day Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Number'
+		formatString: 0
+		lineageTag: aafc4c73-3c8c-4394-835d-f857876ca822
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Dim_Birthdate[Day Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_TermDate = calculated
+		mode: import
+		source = ```
+				Dim_Birthdate
+				
+				```
+
+	annotation PBI_Id = ae0d821a4fc6475894cda669d882387d
+

@@ -1,0 +1,176 @@
+table Fact_HumanResources
+	lineageTag: f6a615e3-c9a5-4cfe-9fc1-cc0f00d9bef0
+
+	column Employee_ID
+		dataType: string
+		lineageTag: 9161faa7-c00e-4125-b961-7fc50d84a2ff
+		summarizeBy: none
+		sourceColumn: Employee_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: c2b05401-f1e1-4887-a4b8-5c7a4c2c535e
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Education Level'
+		dataType: string
+		lineageTag: f8f80c3d-0fe9-4527-a35d-64dcf4aaf0a6
+		summarizeBy: none
+		sourceColumn: Education Level
+		sortByColumn: 'Sort Education Level'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Birthdate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: b646957b-7e5e-47c0-8ba9-c3e17a4778cd
+		summarizeBy: none
+		sourceColumn: Birthdate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Hiredate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 447549e1-b43e-485a-8d86-d99ea2c94bdd
+		summarizeBy: none
+		sourceColumn: Hiredate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Termdate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 292b44dc-3ae6-4dd5-be72-d7e28b8d89fb
+		summarizeBy: none
+		sourceColumn: Termdate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Salary
+		dataType: int64
+		formatString: 0
+		lineageTag: f896eb53-31f2-4d03-bbc9-2411fd790cd5
+		summarizeBy: sum
+		sourceColumn: Salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Performance Rating'
+		dataType: string
+		lineageTag: 628f06e9-7f96-4d34-a51f-45d6dd222ee5
+		summarizeBy: none
+		sourceColumn: Performance Rating
+		sortByColumn: 'Sort Performance'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FK_Location
+		dataType: int64
+		formatString: 0
+		lineageTag: b4d824c1-d0ca-4320-8e65-3a78aae605fb
+		summarizeBy: none
+		sourceColumn: FK_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column FK_Department
+		dataType: int64
+		formatString: 0
+		lineageTag: 0334e9ec-8dce-42f3-80a5-ee4800f8b9c2
+		summarizeBy: none
+		sourceColumn: FK_Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 9010fd10-0973-47ab-a02b-eff6de461460
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Age Group'
+		dataType: string
+		lineageTag: 9464653e-b309-4fd0-9616-478d8b89142d
+		summarizeBy: none
+		sourceColumn: Age Group
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sort Education Level'
+		dataType: int64
+		formatString: 0
+		lineageTag: f1857dee-6df7-4e84-9975-3585f8e7d737
+		summarizeBy: sum
+		sourceColumn: Sort Education Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sort Performance'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d67427a-db08-4cbc-aaf5-b86c06be0f5f
+		summarizeBy: sum
+		sourceColumn: Sort Performance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Full Name'
+		dataType: string
+		lineageTag: e127d619-38bc-4bc3-88c0-98db731fad47
+		summarizeBy: none
+		sourceColumn: Full Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Employee Duration'
+		dataType: int64
+		formatString: 0
+		lineageTag: 82984dc6-1480-436e-9e97-190170ab55cc
+		summarizeBy: sum
+		sourceColumn: Employee Duration
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status Employees'
+		dataType: string
+		lineageTag: b5c8de77-3714-46ae-9667-8cab7c3b7651
+		summarizeBy: none
+		sourceColumn: Status Employees
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_HumanResources = m
+		mode: import
+		queryGroup: 'Data Model\Facts'
+		source =
+				let
+				    Source = _T1_HumanResources
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,41 @@
+table Dim_Department
+	lineageTag: a8e918d1-5d32-4646-905e-ef49f5f3e8ff
+
+	column 'Job Title'
+		dataType: string
+		lineageTag: 93520eaf-178d-4aca-85f1-86deebddb448
+		summarizeBy: none
+		sourceColumn: Job Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		lineageTag: 415d7052-5214-4585-acea-f2349afc2c19
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column PK_Department
+		dataType: int64
+		formatString: 0
+		lineageTag: 82bbaab3-a251-427c-8653-8eaf92608043
+		summarizeBy: none
+		sourceColumn: PK_Department
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Department = m
+		mode: import
+		queryGroup: 'Data Model\Dimensions'
+		source =
+				let
+				    Source = _T1_Department
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

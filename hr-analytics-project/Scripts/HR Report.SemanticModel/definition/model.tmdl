@@ -1,0 +1,63 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Contient toutes les données d'entrées
+queryGroup Imputs
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Pour la transformation des données
+queryGroup Staging
+
+	annotation PBI_QueryGroupOrder = 1
+
+/// Contient les données de sortie
+queryGroup 'Data Model'
+
+	annotation PBI_QueryGroupOrder = 2
+
+/// Tables de fait
+queryGroup 'Data Model\Facts'
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Tables de dimension
+queryGroup 'Data Model\Dimensions'
+
+	annotation PBI_QueryGroupOrder = 1
+
+/// Contient les fonctions
+queryGroup Functions
+
+	annotation PBI_QueryGroupOrder = 3
+
+/// Contient les paramètres
+queryGroup Parameters
+
+	annotation PBI_QueryGroupOrder = 4
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.140.1476.0 (25.02)+e8c6a85d1d09735c5c055c3244a60ff4076cd2cf
+
+annotation PBI_QueryOrder = ["_HumanResources","_T1_Location","_T1_Department","_T1_HumanResources","Dim_Location","Dim_Department","Fact_HumanResources","Last Date Refresh"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dim_Location
+ref table Dim_Department
+ref table Fact_HumanResources
+ref table 'Last Date Refresh'
+ref table 'DAX Analysis'
+ref table Dim_Birthdate
+ref table Dim_HiredDate
+ref table Dim_TermDate
+ref table 'DAX Format'
+
+ref cultureInfo fr-FR
+

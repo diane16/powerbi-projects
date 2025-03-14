@@ -1,0 +1,49 @@
+table Dim_Location
+	lineageTag: 7f5fe56b-98fa-4130-8e44-4b952f5183b8
+
+	column City
+		dataType: string
+		lineageTag: fbcb072b-398d-4689-b7f9-e86c3525a547
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 7535b6c7-7ce0-4589-8aa7-cdaa8a185e15
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column PK_Location
+		dataType: int64
+		formatString: 0
+		lineageTag: fbdc8893-9613-4c80-8059-797484aed6fc
+		summarizeBy: none
+		sourceColumn: PK_Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HQ Vs Branches'
+		dataType: string
+		lineageTag: abc16369-62ca-4e81-b965-83fd8144ea6f
+		summarizeBy: none
+		sourceColumn: HQ Vs Branches
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Location = m
+		mode: import
+		queryGroup: 'Data Model\Dimensions'
+		source =
+				let
+				    Source = _T1_Location
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
