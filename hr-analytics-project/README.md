@@ -26,7 +26,7 @@ This section should focus on salary-related insights, including:
 - A comparison of salaries across education levels and genders to identify any patterns or discrepancies.
 - The correlation between employee age and salary across different departments.
 
-The **Detail** view provides a comprehensive list of all employees with necessary information such as name, position, department, city, state, gender, age, education and salary, hire date, duration, status.
+The **Detail** view provides a comprehensive list of all employees with necessary information such as name, position, department, city, state, gender, age, education, salary, hire date, duration and status.
 
 ---
 #### 🔍 Filters
