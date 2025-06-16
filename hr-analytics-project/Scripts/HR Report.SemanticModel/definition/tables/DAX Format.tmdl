@@ -1,18 +1,18 @@
 table 'DAX Format'
 	lineageTag: ed5390f2-8a5b-4abb-92be-c7810eb5425f
 
-	measure CF_MinMax_TotalEmployees = ```
+	measure CF_MinMax_TotalEmployés = ```
 			
-			VAR _TotalEmployees = [Total Employees]
+			VAR _TotalEmployees = [Nombre Total d'Employés]
 			VAR _Max = 
 			MAXX(
 			    ALLSELECTED(Dim_HiredDate[Year]),
-			    [Total Employees]
+			    [Nombre Total d'Employés]
 			)
 			VAR _Min = 
 			MINX(    
 			    ALLSELECTED(Dim_HiredDate[Year]),
-			    [Total Employees]
+			    [Nombre Total d'Employés]
 			)
 			VAR Result = 
 			SWITCH(
@@ -26,18 +26,18 @@ table 'DAX Format'
 			```
 		lineageTag: c1a5d62a-4c5e-4a22-b243-b9ee69af61ef
 
-	measure CF_MinMax_TerminatedEmployees = ```
+	measure CF_MinMax_EmployésLicenciés = ```
 			
-			VAR _TermitedEmployees = [Terminated Employees]
+			VAR _TermitedEmployees = [Employés Licenciés]
 			VAR _Max = 
 			MAXX(
 			    ALLSELECTED(Dim_TermDate[Year]),
-			    [Terminated Employees]
+			    [Employés Licenciés]
 			)
 			VAR _Min = 
 			MINX(    
 			    ALLSELECTED(Dim_TermDate[Year]),
-			    [Terminated Employees]
+			    [Employés Licenciés]
 			)
 			VAR Result = 
 			SWITCH(
@@ -51,28 +51,28 @@ table 'DAX Format'
 			```
 		lineageTag: d5d87e06-7aa2-4c40-9e38-89bbca6fec78
 
-	measure CF_SubTitle_HiredEmployees =
+	measure CF_SousTitre_EmployésEmbauchés =
 			
-			VAR _TotalEmployees = [Total Employees]
+			VAR _TotalEmployees = [Nombre Total d'Employés]
 			VAR Result = FORMAT(_TotalEmployees, "0")
 			RETURN
 			Result
 		lineageTag: d2c2778f-1111-44f3-bde8-b28e6c65556c
 
-	measure CF_SubTitle_TerminatedEmployees =
+	measure CF_SousTitre_EmployésLicenciés =
 			
-			VAR _TerminatedEmployees = [Terminated Employees]
+			VAR _TerminatedEmployees = [Employés Licenciés]
 			VAR Result = FORMAT(_TerminatedEmployees, "0")
 			RETURN
 			Result
 		lineageTag: d4da1b51-7b2d-4e53-b824-52da67c31e2a
 
-	measure CF_Label_ActiveEmployees = ```
+	measure CF_Label_EmployésActifs = ```
 			
-			VAR _SingleActive = [Active Employees]
+			VAR _SingleActive = [Employés Actifs]
 			VAR _TotalActive = 
 			CALCULATE(
-			    [Active Employees],
+			    [Employés Actifs],
 			    ALL(Dim_Location[HQ Vs Branches]
 			    )
 			)
@@ -83,13 +83,13 @@ table 'DAX Format'
 			```
 		lineageTag: 1fadf085-67b8-4b6b-8260-500a44715f7d
 
-	measure CF_ReportOwner = "Produced by Diane FOKOUA"
+	measure CF_PropriétaireRapport = "Produit par Diane FOKOUA"
 		lineageTag: 5674e37b-6f4d-4bc2-9cc7-19a6984e7918
 
-	measure Cf_LastRefreshDate =
+	measure Cf_DateDernièreRefresh =
 			
 			VAR _LastDatetimeRefresh = MAX('Last Date Refresh'[Last Date Refresh])
-			VAR Result = "Last Refresh Date: " & FORMAT(_LastDatetimeRefresh, "dd/mm/yyyy")
+			VAR Result = "Date de Dernière Mise à jour: " & FORMAT(_LastDatetimeRefresh, "dd/mm/yyyy")
 			RETURN
 			Result
 		lineageTag: 8af4068e-8db9-405f-9a8e-8a20ae5d5cb5

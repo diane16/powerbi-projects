@@ -1,21 +1,31 @@
 table 'DAX Analysis'
 	lineageTag: d828332d-5d14-4928-8d11-54812b0499c7
 
-	measure 'Total Employees' = COUNT('Fact_HumanResources'[Employee_ID])
+	measure 'Nombre Total d''Employés' = COUNT('Fact_HumanResources'[Employee_ID])
 		formatString: 0
 		lineageTag: 412747b1-b6a3-4213-adfd-006949011b70
 
-	measure 'Terminated Employees' = COUNT('Fact_HumanResources'[Termdate])
+	measure 'Employés Licenciés' =
+			
+			CALCULATE(
+			    COUNT(Fact_HumanResources[Employee_ID]),
+			    NOT(ISBLANK(Fact_HumanResources[Termdate]))
+			)
 		formatString: 0
 		lineageTag: ccd1e619-73b0-405f-9b3a-9a1eacdb94d1
 
-	measure 'Active Employees' = COUNTBLANK(Fact_HumanResources[Termdate])
+	measure 'Employés Actifs' =
+			
+			CALCULATE(
+			    COUNT(Fact_HumanResources[Employee_ID]),
+			    ISBLANK(Fact_HumanResources[Termdate])
+			)
 		formatString: 0
 		lineageTag: 2534738e-4a21-49d9-992a-e5d1bb8de903
 
-	measure '% Employees Female' = ```
+	measure '% Employés Femmes' = ```
 			
-			VAR _Total = [Total Employees]
+			VAR _Total = [Nombre Total d'Employés]
 			VAR _TotalFemale = 
 			CALCULATE(
 			    COUNT(Fact_HumanResources[Employee_ID]),
@@ -29,9 +39,9 @@ table 'DAX Analysis'
 		formatString: 0%;-0%;0%
 		lineageTag: 07f05950-00da-41c0-b717-f4e3062845d1
 
-	measure '% Employees Male' = ```
+	measure '% Employés Hommes' = ```
 			
-			VAR _Total = [Total Employees]
+			VAR _Total = [Nombre Total d'Employés]
 			VAR _TotalMale = 
 			CALCULATE(
 			    COUNT(Fact_HumanResources[Employee_ID]),
@@ -47,10 +57,10 @@ table 'DAX Analysis'
 
 	measure '% Performance' = ```
 			
-			VAR _SinglePerformance = [Active Employees]
+			VAR _SinglePerformance = [Employés Actifs]
 			VAR _TotalPerformance = 
 			CALCULATE(
-			    [Active Employees],
+			    [Employés Actifs],
 			    ALLEXCEPT(
 			        Fact_HumanResources,
 			        Fact_HumanResources[Education Level]
@@ -63,7 +73,7 @@ table 'DAX Analysis'
 		formatString: 0%;-0%;0%
 		lineageTag: 5309b7b9-151d-4c20-9693-96870e148711
 
-	measure 'Average Salary' =
+	measure 'Salaire Moyen' =
 			
 			CALCULATE(
 			    AVERAGE(Fact_HumanResources[Salary]),
@@ -72,7 +82,7 @@ table 'DAX Analysis'
 		formatString: 0
 		lineageTag: fff37738-3e28-4949-a4c2-7f21a69867b3
 
-	measure 'Average Salary Female' =
+	measure 'Salaire Moyen Femmes' =
 			
 			CALCULATE(
 			    AVERAGE(Fact_HumanResources[Salary]),
@@ -82,7 +92,7 @@ table 'DAX Analysis'
 		formatString: 0
 		lineageTag: 27d282ad-b9fb-4235-8f3d-c3e549246ad9
 
-	measure 'Average Salary Male' =
+	measure 'Salaire Moyen Hommes' =
 			
 			CALCULATE(
 			    AVERAGE(Fact_HumanResources[Salary]),

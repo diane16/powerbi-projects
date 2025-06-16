@@ -1,0 +1,7 @@
+role HR
+	modelPermission: read
+
+	tablePermission Dim_Department = [Department] == "HR"
+
+	annotation PBI_Id = 4da774883cc34235819e9c242e9315ab
+

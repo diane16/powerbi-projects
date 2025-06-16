@@ -1,6 +1,6 @@
 expression _HumanResources =
 		let
-		    Source = Csv.Document(File.Contents("C:\Users\Agenor\Desktop\Diane\Notes apprentisage\Projet BI\HR Report Project\powerbi-projects\hr-analytics-project\Datasets\HumanResources.csv"),[Delimiter=";", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    Source = Csv.Document(File.Contents("C:\Users\Agenor\Desktop\Diane\Notes apprentisage\Projet BI\autre\test app\HumanResources.csv"),[Delimiter=";", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
 		in
 		    #"En-têtes promus"

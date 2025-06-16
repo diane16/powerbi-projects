@@ -1,46 +1,46 @@
 **HR Analytics** Project 📊
 ---
-#### 📖 Project Overview 
-This is a comprehensive HR report to analyze human resources, providing both **summary** view for high-level indights and **detailed** employee for in-depth analysis.
+#### 📖 Aperçu du projet
+Il s'agit d'un rapport RH complet qui permet d'analyser les données de ressources humaines, en fournissant à la fois une vue **sommaire** pour des informations de haut niveau et une vue **détaillée** de l'employé pour une analyse en profondeur.
 
-The **Summary** view is divided into 3 main sections:
+La vue **Sommaire** est divisée en 3 sections principales :
 
-**Overview**
-The overview should provide key HR metrics, including:
-- The total number of hired, active, and terminated employees.
-- A visual representation of hiring and termination trends over the years.
-- A breakdown of employees by department and job title.
-- A comparison of employee distribution between headquarters (New York) and branch offices.
-- The geographic distribution of employees by city and country.
+**Vue générale**
+La vue générale doit fournir des données clés en matière de ressources humaines, y compris :
+- Le nombre total de salariés embauchés, actifs et licenciés.
+- Une représentation visuelle des tendances en matière d'embauche et de licenciement au fil des ans.
+- Une répartition des employés par département et par titre de poste.
+- Une comparaison de la répartition des employés entre le siège (New York) et les succursales.
+- La répartition géographique des employés par ville et par pays.
 
-**Demographics**
-This section should offer insights into workforce composition by displaying:
-- The gender ratio within the company.
-- The distribution of employees across different age groups and education levels.
-- The total number of employees per age group and education level.
-- The correlation between employees’ educational backgrounds and their performance ratings.
+**Démographie**
+Cette section doit donner un aperçu de la composition de la main-d'œuvre en affichant :
+- le ratio hommes/femmes au sein de l'entreprise
+- La répartition des salariés entre les différents groupes d'âge et niveaux d'éducation.
+- Le nombre total de salariés par tranche d'âge et par niveau d'éducation.
+- La corrélation entre le niveau d'études des salariés et leur évaluation des performances.
 
 
-**Income**
-This section should focus on salary-related insights, including:
-- A comparison of salaries across education levels and genders to identify any patterns or discrepancies.
-- The correlation between employee age and salary across different departments.
+**Revenus**
+Cette section doit se concentrer sur les informations relatives aux salaires, notamment :
+- Une comparaison des salaires entre les niveaux d'éducation et les genres afin d'identifier les tendances ou les divergences.
+- La corrélation entre l'âge de l'employé et le salaire dans les différents départements.
 
-The **Detail** view provides a comprehensive list of all employees with necessary information such as name, position, department, city, state, gender, age, education, salary, hire date, duration and status.
-
----
-#### 🔍 Filters
-The users are able to filter the visuals based on any of the slicers available by clicking on the filter button on the top roght corner in the both pages.
+La vue **Détail** fournit une liste complète de tous les employés avec les informations nécessaires telles que le nom, le poste, le département, la ville, l'état, le sexe, l'âge, l'éducation, le salaire, la date d'embauche, la durée et le statut.
 
 ---
-#### 🧮 Data Range
-The data range is **from 2014 to 2024**.
+#### 🔍 Filtres
+Les utilisateurs peuvent filtrer les images sur la base de l'un des slicers disponibles en cliquant sur le bouton de filtrage situé dans le coin supérieur droit des deux pages.
 
 ---
-#### 🗂️ Data Source
-This report uses a data generated using **ChatGPT** and **Faker** library.
+#### 🧮 Plage de Données
+La plage de données est **de 2014 à 2024**.
 
 ---
-#### ✍️ Report Owner ###
+#### 🗂️ Source des Données
+Ce rapport utilise des données générées à l'aide des bibliothèques **ChatGPT** et **Faker**.
+
+---
+#### ✍️ Propriétaire ###
 - 👤: Diane FOKOUA
 - ✉️: diane.fokoua.noche@gmail.com

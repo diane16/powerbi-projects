@@ -198,7 +198,9 @@ cultureInfo fr-FR
 			      },
 			      "State": "Generated",
 			      "Terms": [
-			        {},
+			        {
+			          "": {}
+			        },
 			        {
 			          "province": {
 			            "Type": "Noun",
@@ -2994,7 +2996,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "Total Employees"
+			          "ConceptualProperty": "Nombre Total d'Employés"
 			        }
 			      },
 			      "State": "Generated",
@@ -3116,7 +3118,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "Terminated Employees"
+			          "ConceptualProperty": "Employés Licenciés"
 			        }
 			      },
 			      "State": "Generated",
@@ -3238,7 +3240,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "Active Employees"
+			          "ConceptualProperty": "Employés Actifs"
 			        }
 			      },
 			      "State": "Generated",
@@ -3370,7 +3372,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "% Employees Female"
+			          "ConceptualProperty": "% Employés Femmes"
 			        }
 			      },
 			      "State": "Generated",
@@ -3426,7 +3428,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "% Employees Male"
+			          "ConceptualProperty": "% Employés Hommes"
 			        }
 			      },
 			      "State": "Generated",
@@ -5656,7 +5658,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Format",
-			          "ConceptualProperty": "CF_MinMax_TotalEmployees"
+			          "ConceptualProperty": "CF_MinMax_TotalEmployés"
 			        }
 			      },
 			      "State": "Generated",
@@ -5797,7 +5799,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Format",
-			          "ConceptualProperty": "CF_MinMax_TerminatedEmployees"
+			          "ConceptualProperty": "CF_MinMax_EmployésLicenciés"
 			        }
 			      },
 			      "State": "Generated",
@@ -5920,7 +5922,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Format",
-			          "ConceptualProperty": "CF_SubTitle_HiredEmployees"
+			          "ConceptualProperty": "CF_SousTitre_EmployésEmbauchés"
 			        }
 			      },
 			      "State": "Generated",
@@ -6043,7 +6045,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Format",
-			          "ConceptualProperty": "CF_SubTitle_TerminatedEmployees"
+			          "ConceptualProperty": "CF_SousTitre_EmployésLicenciés"
 			        }
 			      },
 			      "State": "Generated",
@@ -6166,7 +6168,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Format",
-			          "ConceptualProperty": "CF_Label_ActiveEmployees"
+			          "ConceptualProperty": "CF_Label_EmployésActifs"
 			        }
 			      },
 			      "State": "Generated",
@@ -6543,7 +6545,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "Average Salary"
+			          "ConceptualProperty": "Salaire Moyen"
 			        }
 			      },
 			      "State": "Generated",
@@ -6619,7 +6621,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "Average Salary Female"
+			          "ConceptualProperty": "Salaire Moyen Femmes"
 			        }
 			      },
 			      "State": "Generated",
@@ -6707,7 +6709,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Analysis",
-			          "ConceptualProperty": "Average Salary Male"
+			          "ConceptualProperty": "Salaire Moyen Hommes"
 			        }
 			      },
 			      "State": "Generated",
@@ -6948,7 +6950,7 @@ cultureInfo fr-FR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DAX Format",
-			          "ConceptualProperty": "CF_ReportOwner"
+			          "ConceptualProperty": "CF_PropriétaireRapport"
 			        }
 			      },
 			      "State": "Generated",
