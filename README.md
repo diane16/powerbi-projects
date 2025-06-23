@@ -35,7 +35,7 @@ Ce tableau de bord fournit une double vue :
 📆 **Période analysée** : 2014 – 2024  
 📈 **Données simulées** avec les bibliothèques Faker et ChatGPT  
 📁 **Fichier PBIP** : [`hr-analytics-project/Scripts/HR%20Report.pbip`](./hr-analytics-project/Scripts/HR%20Report.pbip)  
-📷 *Aperçu visuel à venir*
+📷 *Aperçu visuel à venir* : ![Vue Sommaire du Rapport RH](./hr-analytics-project/Dashboard%20Images/Rapport%20RH%20Vue%20Sommaire.pdf)
 
 ---
 
