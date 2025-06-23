@@ -1,46 +1,85 @@
-** Analyse des Données RH ** 📊
----
-#### 📖 Aperçu du projet
-Il s'agit d'un rapport RH complet qui permet d'analyser les données de ressources humaines, en fournissant à la fois une vue **sommaire** pour des informations de haut niveau et une vue **détaillée** de l'employé pour une analyse en profondeur.
+# 📊 Analyse des Données RH
 
-La vue **Sommaire** est divisée en 3 sections principales :
-
-**Vue générale**
-La vue générale doit fournir des données clés en matière de ressources humaines, y compris :
-- Le nombre total de salariés embauchés, actifs et licenciés.
-- Une représentation visuelle des tendances en matière d'embauche et de licenciement au fil des ans.
-- Une répartition des employés par département et par titre de poste.
-- Une comparaison de la répartition des employés entre le siège (New York) et les succursales.
-- La répartition géographique des employés par ville et par pays.
-
-**Démographie**
-Cette section doit donner un aperçu de la composition de la main-d'œuvre en affichant :
-- le ratio hommes/femmes au sein de l'entreprise
-- La répartition des salariés entre les différents groupes d'âge et niveaux d'éducation.
-- Le nombre total de salariés par tranche d'âge et par niveau d'éducation.
-- La corrélation entre le niveau d'études des salariés et leur évaluation des performances.
-
-
-**Revenus**
-Cette section doit se concentrer sur les informations relatives aux salaires, notamment :
-- Une comparaison des salaires entre les niveaux d'éducation et les genres afin d'identifier les tendances ou les divergences.
-- La corrélation entre l'âge de l'employé et le salaire dans les différents départements.
-
-La vue **Détail** fournit une liste complète de tous les employés avec les informations nécessaires telles que le nom, le poste, le département, la ville, l'état, le sexe, l'âge, l'éducation, le salaire, la date d'embauche, la durée et le statut.
+Bienvenue dans ce projet d’analyse des données RH, conçu pour fournir une vue d’ensemble claire ainsi qu’une analyse détaillée des employés à travers différents indicateurs stratégiques.
 
 ---
-#### 🔍 Filtres
-Les utilisateurs peuvent filtrer les images sur la base de l'un des slicers disponibles en cliquant sur le bouton de filtrage situé dans le coin supérieur droit des deux pages.
+
+## 📚 Table des Matières
+
+- [🔍 Aperçu du projet](#-aperçu-du-projet)
+- [📈 Vue Sommaire](#-vue-sommaire)
+  - [📊 Vue Générale](#-vue-générale)
+  - [👥 Démographie](#-démographie)
+  - [💰 Revenus](#-revenus)
+- [🧾 Vue Détail](#-vue-détail)
+- [🧮 Filtres](#-filtres)
+- [📆 Plage de Données](#-plage-de-données)
+- [🗂️ Source des Données](#️-source-des-données)
+- [✍️ Propriétaire](#-propriétaire)
 
 ---
-#### 🧮 Plage de Données
-La plage de données est **de 2014 à 2024**.
+
+## 🔍 Aperçu du projet
+
+Ce rapport RH permet d’analyser les données de ressources humaines à deux niveaux :
+- **Vue Sommaire** : pour des indicateurs globaux.
+- **Vue Détail** : pour l’analyse spécifique de chaque employé.
 
 ---
-#### 🗂️ Source des Données
-Ce rapport utilise des données générées à l'aide des bibliothèques **ChatGPT** et **Faker**.
+
+## 📈 Vue Sommaire
+
+### 📊 Vue Générale
+- Nombre total d’employés : embauchés, actifs, licenciés.
+- Tendances annuelles : embauche vs licenciement.
+- Répartition par **département** et **poste**.
+- Comparaison **siège (New York)** vs **succursales**.
+- Carte géographique des effectifs (ville, pays).
+
+### 👥 Démographie
+- Ratio **hommes/femmes**.
+- Répartition par **tranche d’âge** et **niveau d’éducation**.
+- Corrélation **études ↔ évaluation de performance**.
+
+### 💰 Revenus
+- Comparaison des **salaires** selon :
+  - Niveau d’éducation
+  - Genre
+- Corrélation **âge ↔ salaire** par département.
 
 ---
-#### ✍️ Propriétaire ###
-- 👤: Diane FOKOUA
-- ✉️: diane.fokoua.noche@gmail.com
+
+## 🧾 Vue Détail
+
+Liste complète de tous les employés, avec :
+- Nom, Poste, Département
+- Ville, État, Sexe, Âge
+- Éducation, Salaire
+- Date d’embauche, Durée, Statut
+
+---
+
+## 🧮 Filtres
+
+Des **slicers interactifs** sont disponibles via le bouton de filtrage en haut à droite de chaque page.
+
+---
+
+## 📆 Plage de Données
+
+> **2014 - 2024**
+
+---
+
+## 🗂️ Source des Données
+
+Ce projet utilise des données générées avec les bibliothèques **ChatGPT** et **Faker**.
+
+---
+
+## ✍️ Propriétaire
+
+**👤 Diane FOKOUA**  
+📧 [diane.fokoua.noche@gmail.com](mailto:diane.fokoua.noche@gmail.com)
+
+---

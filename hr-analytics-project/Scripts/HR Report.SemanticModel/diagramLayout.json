@@ -10,11 +10,50 @@
       "nodes": [
         {
           "location": {
-            "x": 50,
-            "y": 803.01641770741435
+            "x": 643.87811655024109,
+            "y": 656.68058269754533
           },
           "nodeIndex": "Dim_Department",
           "nodeLineageTag": "a8e918d1-5d32-4646-905e-ef49f5f3e8ff",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 270.26145445772636
+          },
+          "nodeIndex": "Dim_Location",
+          "nodeLineageTag": "7f5fe56b-98fa-4130-8e44-4b952f5183b8",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 393.759187633374,
+            "y": 303.74290435299321
+          },
+          "nodeIndex": "Fact_HumanResources",
+          "nodeLineageTag": "f6a615e3-c9a5-4cfe-9fc1-cc0f00d9bef0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 914.04011423133977,
+            "y": 427.72131759143076
+          },
+          "nodeIndex": "Last Date Refresh",
+          "nodeLineageTag": "672293ba-b0de-42e4-9b56-dd32c99c610c",
           "size": {
             "height": 152,
             "width": 234
@@ -23,108 +62,70 @@
         },
         {
           "location": {
-            "x": 276.31956554051118,
-            "y": 537.21594218170321
+            "x": 680.04011423133966,
+            "y": 62.926533138475406
           },
-          "nodeIndex": "Dim_Location",
-          "nodeLineageTag": "7f5fe56b-98fa-4130-8e44-4b952f5183b8",
-          "size": {
-            "height": 152,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 335.52076473524357,
-            "y": 867.88155087446523
-          },
-          "nodeIndex": "Fact_HumanResources",
-          "nodeLineageTag": "f6a615e3-c9a5-4cfe-9fc1-cc0f00d9bef0",
+          "nodeIndex": "Dim_TermDate",
+          "nodeLineageTag": "365f06c0-9f7a-476a-a73f-c1b8080c4f39",
           "size": {
             "height": 300,
-            "width": 234
-          },
-          "zIndex": 7
-        },
-        {
-          "location": {
-            "x": 1425.8459741629,
-            "y": 1026.8570231180215
-          },
-          "nodeIndex": "Last Date Refresh",
-          "nodeLineageTag": "672293ba-b0de-42e4-9b56-dd32c99c610c",
-          "size": {
-            "height": 152,
             "width": 234
           },
           "zIndex": 6
         },
         {
           "location": {
-            "x": 708.66221533227008,
-            "y": 533.70180086109576
-          },
-          "nodeIndex": "Dim_TermDate",
-          "nodeLineageTag": "365f06c0-9f7a-476a-a73f-c1b8080c4f39",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 8
-        },
-        {
-          "location": {
-            "x": 704.15916085068682,
-            "y": 872.25740495221237
+            "x": 193.65884890985967,
+            "y": 657.44263518286152
           },
           "nodeIndex": "Dim_Birthdate",
           "nodeLineageTag": "d11af011-01c8-49d8-9973-95d896232eb9",
           "size": {
-            "height": 192,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1045.8459741629,
-            "y": 724.89764668648661
+            "x": 1198.0401142313399,
+            "y": 353.72131759143076
           },
           "nodeIndex": "DAX Analysis",
           "size": {
-            "height": 200,
+            "height": 300,
             "width": 234
           },
           "zIndex": 1
         },
         {
           "location": {
-            "x": 687.41374257306165,
-            "y": 1176.0878418262068
+            "x": 225.15366954567878,
+            "y": 0
           },
           "nodeIndex": "Dim_HiredDate",
+          "nodeLineageTag": "db1b4e8a-9a14-45b2-a69f-9aa444abbb1e",
           "size": {
-            "height": 210.05616594469961,
+            "height": 300,
             "width": 234
           },
           "zIndex": 2
         },
         {
           "location": {
-            "x": 1659.8459741629,
-            "y": 504.12170374193727
+            "x": 1482.0401142313399,
+            "y": 353.72131759143076
           },
           "nodeIndex": "DAX Format",
           "size": {
-            "height": 200,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 8
         }
       ],
       "name": "Toutes les tables",
-      "zoomValue": 79.553182037699827,
+      "zoomValue": 50.052514566908634,
       "pinKeyFieldsToTop": true,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
