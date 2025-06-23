@@ -273,10 +273,10 @@
           "z": 3000.00
         },
         {
-          "config": "{\"name\":\"747f4051aaa100dd5ab4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":533.8217682282494,\"y\":695.4110602324762,\"z\":6000,\"width\":178.90243043325114,\"height\":24.526946107784433,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"DAX Format.Cf_LastRefreshDate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DAX Format\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Cf_DateDernièreRefresh\"},\"Name\":\"DAX Format.Cf_LastRefreshDate\",\"NativeReferenceName\":\"Cf_LastRefreshDate\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Carte_ReportOwner'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "config": "{\"name\":\"747f4051aaa100dd5ab4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":533.8217682282494,\"y\":695.4110602324762,\"z\":6000,\"width\":228,\"height\":25,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"DAX Format.Cf_LastRefreshDate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DAX Format\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Cf_DateDernièreRefresh\"},\"Name\":\"DAX Format.Cf_LastRefreshDate\",\"NativeReferenceName\":\"Cf_LastRefreshDate\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"wordWrap\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Carte_ReportOwner'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "height": 24.53,
-          "width": 178.90,
+          "height": 25.00,
+          "width": 228.00,
           "x": 533.82,
           "y": 695.41,
           "z": 6000.00
@@ -380,7 +380,7 @@
           "z": 8000.00
         },
         {
-          "config": "{\"name\":\"d9793da3a0138a201089\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":155.81824586121874,\"height\":40.39732300105671,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"LOGO HERE\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"16pt\",\"color\":\"#023e73\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'ZoneDeTexte_Logo'\"}}}}}]}},\"parentGroupName\":\"09522e7c83042d587e0c\"}",
+          "config": "{\"name\":\"d9793da3a0138a201089\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1000,\"width\":155.81824586121874,\"height\":40.39732300105671,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"LOGO ICI\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"21.3333px\",\"color\":\"#023e73\"}}]}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'ZoneDeTexte_Logo'\"}}}}}]}},\"parentGroupName\":\"09522e7c83042d587e0c\"}",
           "filters": "[]",
           "height": 40.40,
           "width": 155.82,
