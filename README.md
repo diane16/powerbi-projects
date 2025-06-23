@@ -1,4 +1,4 @@
-# 💼 Power BI Projects by Diane FOKOUA
+# 💼 Projets Power BI – Diane FOKOUA
 
 Bienvenue dans le dépôt **Power BI Projects** 🚀  
 Ce dépôt met en avant mes travaux en visualisation de données avec **Power BI**.  
@@ -57,4 +57,4 @@ Ce tableau de bord fournit une double vue :
 
 ---
 
-⭐ *Merci de visiter ce dépôt ! Un ⭐ sur GitHub est toujours apprécié 😉*
+⭐ *Merci de visiter ce dépôt !😉*
